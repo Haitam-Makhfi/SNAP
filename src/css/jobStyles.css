@@ -1,0 +1,335 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.wraper {
+  width: min(100% - 1rem, 85rem);
+  margin-inline: auto;
+}
+:root {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+}
+button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+}
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.2;
+  color: #fff;
+  width: 17ch;
+  font-weight: 500;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: 1em;
+  text-transform: capitalize;
+}
+h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+p {
+  line-height: 1.5;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+nav .nav-items {
+  display: flex;
+  align-items: center;
+}
+nav .nav-buttons {
+  display: none;
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 41%);
+}
+nav .nav-buttons button {
+  padding: 0.5em 1.3em;
+  border: 2px solid hsl(0, 0%, 8%);
+  border-radius: 7px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.6s;
+}
+nav .nav-buttons button:first-of-type {
+  border: none;
+  width: 93px;
+}
+nav .nav-buttons button:first-of-type:hover {
+  border: 2px solid hsl(0, 0%, 8%);
+}
+nav .nav-buttons button:last-of-type:hover {
+  background-color: hsl(0, 0%, 8%);
+  color: #fff;
+}
+/* nav .nav-buttons:last-child {
+} */
+nav .fa-bars {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 8%);
+}
+nav aside {
+  height: 100vh;
+  width: 65%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: hsl(0, 0%, 98%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  animation: animate 0.6s;
+}
+nav aside .fa-xmark {
+  width: 100%;
+  text-align: right;
+  margin: 0.5em 1.6em 1em 0;
+  font-size: 2rem;
+}
+nav aside ul {
+  width: 80%;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: hsl(0, 0%, 41%);
+}
+nav aside ul li {
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+}
+nav aside ul li i {
+  margin-left: 10px;
+}
+nav aside button {
+  width: 80%;
+  padding: 0.7em 0;
+  background: transparent;
+  color: hsl(0, 0%, 41%);
+  border: 2px solid hsl(0, 0%, 41%);
+  outline: none;
+  border-radius: 10px;
+}
+.login {
+  border: none;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url(../../images/office-865091_1280.jpg);
+  background-size: cover;
+  background-position: bottom;
+  width: 80%;
+  height: 80vh;
+  border-radius: 15px;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  padding-inline: auto;
+  background-color: hsl(0, 0%, 41%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 15px 0px hsla(0, 0%, 0%, 0.5);
+}
+.content h1 span {
+  font-weight: 700;
+}
+.content .search {
+  padding-top: 2em;
+  width: 40%;
+}
+.content .search label[for="job"] {
+  position: relative;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.content .search label[for="job"] button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 1.4em 1.4em;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background-color: hsla(0, 0%, 8%, 1);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.content .search label[for="job"] button:hover {
+  background-color: hsla(0, 0%, 8%, 0.9);
+}
+
+.content .search label[for="job"] input {
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 1em 1em;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+}
+.content label[for="country"] {
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+.content label[for="country"] select {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.content .err-box {
+  color: red;
+  font-weight: 700;
+  margin-top: 1em;
+}
+.posting {
+  max-width: 55em;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: hsla(0, 0%, 8%, 1);
+  margin-bottom: 1em;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: max-content max-content 1fr;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px -3px hsla(0, 0%, 0%, 0.5);
+  transition: 0.3s;
+}
+.posting:hover {
+  background-color: hsla(0, 0%, 8%, 0.9);
+}
+.posting .header-container {
+  grid-column: 2/-1;
+  display: flex;
+}
+.posting .header-container .header-container-content {
+  width: 100%;
+  align-self: center;
+}
+.posting .posting-header {
+  grid-column: 2/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  width: 100%;
+  padding-bottom: 0.5em;
+}
+.posting .posting-header .company-name-location .fa-arrow-right {
+  margin: 0 1em;
+}
+.posting .posting-header .company-name-location .location {
+  color: #389153;
+}
+.posting .posting-header .posting-time {
+  color: #767f89;
+}
+.posting .posting-title {
+  grid-column: 2/-1;
+  grid-row: 2/3;
+  font-size: 2rem;
+  padding-top: 0.3em;
+}
+.posting .logo-container {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.posting .fa-building-user {
+  padding: 0.7em;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 7px;
+}
+.posting .posting-body {
+  grid-column: 2/-1;
+  padding-bottom: 1em;
+  border-bottom: solid 1px hsl(0, 0%, 41%);
+}
+.posting .posting-body p {
+  color: #767f89;
+}
+.posting .posting-footer {
+  padding-top: 1em;
+  grid-column: 2/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+.posting .posting-footer .contract {
+  order: 1;
+}
+.posting .posting-footer .salary {
+  color: #389153;
+  order: 2;
+}
+@media (min-width: 55em) {
+  nav .nav-items .desk-top-nav {
+    display: block;
+  }
+  nav .fa-bars {
+    display: none;
+  }
+  nav .nav-items .desk-top-nav {
+    display: block;
+  }
+  nav .nav-buttons {
+    display: block;
+  }
+}
